@@ -1,0 +1,65 @@
+<div class="bugTracker">
+  <div class="pageHeader">
+    <h2>Bug Tracker</h2>
+    <p>Report all bugs!</p>
+  </div>
+
+  <form class="" action="<?php echo $block->getBaseUrl().'issues/issue/save'; ?>" id="bug-tracker-form" method="post" enctype="multipart/form-data">
+      <fieldset class="fieldset">
+        <table>
+          <tr>
+            <td><label class="label" for="title"><span>Bug Title</span></label></td>
+            <td><div class="control"><input name="name" id="name" title="Name" value="" class="input-text" type="text"></div></td>
+          </tr>
+          <tr>
+            <td><label class="label" for="description"><span>Issue Description</span></label></td>
+            <td><div class="control"><textarea name="bug_description" id="bug_description" title="Description" class="input-text" cols="40" rows="7"></textarea></div></td>
+          </tr>
+          <tr>
+            <td><label class="label" for="operating_system"><span>Operating System</span></label></td>
+            <td>
+              <div class="control">
+                <select class="select" name="operating_system" id="operating_system">
+                  <option value="">Select OS</option>
+                  <option value="windows">Windows</option>
+                  <option value="linux">Linux</option>
+                  <option value="unix">Unix</option>
+                </select>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><label class="label" for="browser"><span>Browser</span></label></td>
+            <td>
+              <div class="control">
+                <input name="browser" class="radio" type="radio" value="Internet Explorer" /> Internet Explorer <br />
+                <input name="browser" class="radio" type="radio" value="Chrome" /> Chrome <br />
+                <input name="browser" class="radio" type="radio" value="Firefox" /> Firefox <br />
+                <input name="browser" class="radio" type="radio" value="Safari" /> Safari <br />
+                <input name="browser" class="radio" type="radio" value="Opera" /> Opera <br />
+                <input name="browser" class="radio" type="radio" value="Other" /> Other
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><label class="label" for="image"><span>Screenshot</span></label></td>
+            <td><div class="control"><input name="image" id="image" title="Screenshot" value="" class="input-file" type="file"></div></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <div class="actions-toolbar">
+                  <div class="primary">
+                      <button type="submit" title="Submit" class="action submit primary">
+                          <span>Submit</span>
+                      </button>
+                  </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+  </form>
+
+</div>

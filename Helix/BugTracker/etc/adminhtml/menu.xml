@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Helix_BugTracker::bugtracker" title="Bug Tracker" module="Helix_BugTracker" sortOrder="51" resource="Helix_BugTracker::bugtracker"/>
+        <add id="Helix_BugTracker::bug" title="Manage Bugs" module="Helix_BugTracker" sortOrder="10" action="bugtracker/bug" resource="Helix_BugTracker::bug" parent="Helix_BugTracker::bugtracker"/>
+        <add id="Helix_BugTracker::bug_configuration" title="Configuration" module="Helix_BugTracker" sortOrder="99" parent="Helix_BugTracker::bugtracker" action="adminhtml/system_config/edit/section/bugtracker" resource="Helix_BugTracker::bugtracker_configuration"/>
+    </menu>
+</config>

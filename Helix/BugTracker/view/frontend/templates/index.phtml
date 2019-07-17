@@ -1,0 +1,50 @@
+<style>
+  table {  font-family: verdana, sans-serif;  border-collapse: collapse;  width: 100%;  margin-top: 30px;}
+  td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;  }
+  tr:nth-child(even) { background-color: #dddddd; }
+  .bug-id{width:5%} .bug-name{width:80%}
+  .issues {
+    display: block;
+  }
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+</style>
+
+<div class="issues">
+  <div class="field title left">
+    <h4>Tracking Issues:</h4>
+  </div>
+  <div class="actions-toolbar right">
+    <div class="primary">
+        <a href="<?php echo $block->getBaseUrl().'issues/issue/create'; ?>" class="action submit primary">
+            <span>Create New Issue</span>
+        </a>
+    </div>
+  </div>
+</div>
+
+
+<table>
+  <tr>
+    <th class="bug-id">Id</th>
+    <th class="bug-name">Name</th>
+    <th>Resolved Date</th>
+  </tr>
+    <?php
+        foreach ($block->getBugCollection() as $key=>$bug){
+          $date = strtotime($bug->getUpdatedAt());
+            echo '<tr>
+                    <td>'.$bug->getBugId().'</td>
+                    <td>'.$bug->getName().'</td>
+                    <td>'.date('Y-m-d', $date).'</td>
+                  </tr>';
+        }
+    ?>
+</table>
+
+</body>
+</html>

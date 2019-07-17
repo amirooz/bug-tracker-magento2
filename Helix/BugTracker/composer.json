@@ -1,6 +1,6 @@
 {
     "name": "helix/bug-tracker",
-    "description": "N/A",
+    "description": "A Magento 2 module that reports new bug",
     "require": {
         "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0|~7.2.0",
         "magento/module-config": "100.0.*",
@@ -13,6 +13,13 @@
     "license": [
         "OSL-3.0",
         "AFL-3.0"
+    ],
+    "author": [
+      {
+        "name": "MD. Amir Hossain",
+        "email": "amirhossain0606@gmail.com",
+        "role": "Sr. Magento Developer"
+      }
     ],
     "autoload": {
         "files": [
